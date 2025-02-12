@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+          font-family: 'Inter', sans-serif;
+          background-color: #121212; /* Dark background */
+          color: #E0E0E0; /* Light text color */
+        }
+        .formbold-mb-3 {
+          margin-bottom: 15px;
+        }
+      
+        .formbold-main-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 48px;
+        }
+      
+        .formbold-form-wrapper {
+          margin: 0 auto;
+          max-width: 570px;
+          width: 100%;
+          background: #1E1E1E; /* Dark form background */
+          padding: 40px;
+          border-radius: 8px; /* Slight rounding for better aesthetics */
+        }
+
+        /* Centering and filling the image */
+        .formbold-img {
+          display: block;
+          margin: 0 auto 45px;
+          width: 100%;
+          height: auto;
+          object-fit: cover; /* Makes the image fill the container */
+        }
+      
+        .formbold-form-input {
+          width: 100%;
+          padding: 13px 22px;
+          border-radius: 5px;
+          border: 1px solid #333; /* Dark border for input */
+          background: #333; /* Dark input background */
+          font-weight: 500;
+          font-size: 16px;
+          color: #E0E0E0; /* Light text in inputs */
+          outline: none;
+          resize: none;
+        }
+        .formbold-form-input::placeholder,
+        select.formbold-form-input,
+        .formbold-form-input[type='date']::-webkit-datetime-edit-text,
+        .formbold-form-input[type='date']::-webkit-datetime-edit-month-field,
+        .formbold-form-input[type='date']::-webkit-datetime-edit-day-field,
+        .formbold-form-input[type='date']::-webkit-datetime-edit-year-field {
+          color: rgba(224, 224, 224, 0.5); /* Lighter placeholder */
+        }
+      
+        .formbold-form-input:focus {
+          border-color: #6a64f1;
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+        .formbold-form-label {
+          color: #E0E0E0; /* Light label color */
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          display: block;
+          margin-bottom: 10px;
+        }
+      
+        .formbold-form-file-flex {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+        .formbold-form-file-flex .formbold-form-label {
+          margin-bottom: 0;
+        }
+        .formbold-form-file {
+          font-size: 14px;
+          line-height: 24px;
+          color: #E0E0E0;
+        }
+        .formbold-form-file::-webkit-file-upload-button {
+          display: none;
+        }
+        .formbold-form-file:before {
+          content: 'Upload file';
+          display: inline-block;
+          background: #444; /* Dark background for file input */
+          border: 0.5px solid #333;
+          box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+          border-radius: 3px;
+          padding: 3px 12px;
+          outline: none;
+          white-space: nowrap;
+          -webkit-user-select: none;
+          cursor: pointer;
+          color: #E0E0E0;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          margin-right: 10px;
+        }
+      
+        .formbold-btn {
+          text-align: center;
+          width: 100%;
+          font-size: 16px;
+          border-radius: 5px;
+          padding: 14px 25px;
+          border: none;
+          font-weight: 500;
+          background-color: #6a64f1;
+          color: white;
+          cursor: pointer;
+          margin-top: 25px;
+        }
+        .formbold-btn:hover {
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+      </style>
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <h2 style="text-align: center; margin-bottom: 1em;">Confession Page</h2>
+            <img class="formbold-img" src="https://cdn.discordapp.com/icons/1202305993954828289/f8745120802812f18a6ce73a9a811586.webp?size=1024" alt="Logo">
+            <form action="" method="POST" enctype="multipart/form-data">
+               
+                <!-- Confession message field -->
+                <div class="formbold-mb-3">
+                    <label for="message" class="formbold-form-label">
+                        Write Your Confession
+                    </label>
+                    <textarea
+                        rows="6"
+                        name="message"
+                        id="message"
+                        class="formbold-form-input",
+                        placeholder="..."
+                        required
+                    ></textarea>
+                </div>
+      
+                <!-- File upload field -->
+                <div class="formbold-form-file-flex">
+                    <label for="upload" class="formbold-form-label">
+                        Upload File
+                    </label>
+                    <input
+                        type="file"
+                        name="upload"
+                        id="upload"
+                        class="formbold-form-file"
+                    />
+                </div>
+      
+                <button class="formbold-btn">Confess</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
